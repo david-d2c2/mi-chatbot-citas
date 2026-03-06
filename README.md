@@ -73,6 +73,10 @@ mi-chatbot-citas/
 
 ## Instalación
 
+Descarga el archivo `mi-chatbot-citas-v1.0.0-github.zip` desde la sección **Releases** del repositorio.
+
+No utilizar los archivos automáticos `Source code (zip)` o `Source code (tar.gz)` para la instalación en WordPress.
+
 1. Sube la carpeta `mi-chatbot-citas` a `/wp-content/plugins/` o instala el ZIP desde **Plugins > Añadir nuevo > Subir plugin**.
 2. Activa el plugin.
 3. Ve a **Ajustes > Mi Chatbot Citas**.
