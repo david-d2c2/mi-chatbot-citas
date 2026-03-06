@@ -1,0 +1,154 @@
+.mcc-shell {
+  --mcc-primary: #111827;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.mcc-shell.inline {
+  width: 100%;
+  max-width: 420px;
+}
+
+.mcc-shell.floating .mcc-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+.mcc-shell.floating .mcc-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 78px;
+  z-index: 9999;
+  width: 380px;
+  max-width: calc(100vw - 24px);
+}
+
+.mcc-shell .mcc-toggle,
+.mcc-shell .mcc-send {
+  background: var(--mcc-primary);
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.mcc-shell .mcc-toggle:hover,
+.mcc-shell .mcc-send:hover {
+  transform: translateY(-1px);
+}
+
+.mcc-shell .mcc-toggle {
+  padding: 12px 18px;
+  box-shadow: 0 12px 30px rgba(17, 24, 39, .15);
+}
+
+.mcc-shell .mcc-panel.is-hidden {
+  display: none;
+}
+
+.mcc-panel-inner {
+  display: flex;
+  flex-direction: column;
+  height: 560px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(17, 24, 39, .12);
+}
+
+.mcc-header {
+  padding: 16px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #fff;
+}
+
+.mcc-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.mcc-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: #f8fafc;
+}
+
+.mcc-message-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.mcc-message-row.user {
+  justify-content: flex-end;
+}
+
+.mcc-message {
+  max-width: 84%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+.mcc-message.bot {
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+}
+
+.mcc-message.user {
+  background: var(--mcc-primary);
+  color: #fff;
+}
+
+.mcc-form {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  border-top: 1px solid #f1f5f9;
+  background: #fff;
+}
+
+.mcc-input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+.mcc-input:focus {
+  border-color: var(--mcc-primary);
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, .08);
+}
+
+.mcc-send {
+  padding: 0 16px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .mcc-shell.inline {
+    max-width: 100%;
+  }
+
+  .mcc-shell.floating .mcc-panel {
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-width: none;
+  }
+
+  .mcc-panel-inner {
+    height: 72vh;
+  }
+}
